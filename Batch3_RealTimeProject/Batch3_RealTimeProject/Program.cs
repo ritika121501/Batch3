@@ -1,10 +1,14 @@
 using Batch3_RealTimeProject.DAL;
+using Batch3_RealTimeProject.DAL.Repository;
+using Batch3_RealTimeProject.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IGenericRepo<Category>, GenericRepo<Category>>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("batch20")));
 
