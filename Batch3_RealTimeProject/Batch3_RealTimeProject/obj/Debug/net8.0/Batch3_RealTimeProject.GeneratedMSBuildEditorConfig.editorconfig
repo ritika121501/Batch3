@@ -9,39 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Batch3_RealTimeProject
 build_property.RootNamespace = Batch3_RealTimeProject
-build_property.ProjectDir = C:\Users\Jha\Desktop\Batch3\Batch3_RealTimeProject\Batch3_RealTimeProject\
+build_property.ProjectDir = D:\coding\C# Ritika class\Ritika Solutions files\Ritika Shopping Real time project\Batch3_RealTimeProject\Batch3_RealTimeProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jha\Desktop\Batch3\Batch3_RealTimeProject\Batch3_RealTimeProject
+build_property.MSBuildProjectDirectory = D:\coding\C# Ritika class\Ritika Solutions files\Ritika Shopping Real time project\Batch3_RealTimeProject\Batch3_RealTimeProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Home/Index.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Category/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Category/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Category/ShowCategoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcU2hvd0NhdGVnb3J5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Home/Privacy.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Shared/Error.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/_ViewImports.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/_ViewStart.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jha/Desktop/Batch3/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Shared/_Layout.cshtml]
+[D:/coding/C\# Ritika class/Ritika Solutions files/Ritika Shopping Real time project/Batch3_RealTimeProject/Batch3_RealTimeProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-h4199fmlmr
