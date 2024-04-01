@@ -7,9 +7,9 @@ namespace Batch3_RealTimeProject.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly IRepository<Product> _productRepo;
+        private readonly IGenericRepo<Product> _productRepo;
 
-        public ProductController(IRepository<Product> productRepo)
+        public ProductController(IGenericRepo<Product> productRepo)
         {
             _productRepo = productRepo;
         }
