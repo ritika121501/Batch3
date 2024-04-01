@@ -1,0 +1,60 @@
+﻿@model List<Product>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Product Table</h2>
+    <a type="button" class="btn btn-primary" asp-controller="Product" asp-action="AddProduct">AddProduct</a>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>ISBN</th>
+    <th>Author</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>NumberOfPages</th>
+    <th>CategoryId</th>
+  </tr>
+
+        @foreach(var i in Model)
+        {
+                    <tr>
+                            <td>@Html.DisplayFor(m => i.Title)</td>
+                            <td>@Html.DisplayFor(m => i.ISBN)</td>
+                            <td>@Html.DisplayFor(m => i.Author)</td>
+                            <td>@Html.DisplayFor(m => i.Price)</td>
+                            <td>@Html.DisplayFor(m => i.Description)</td>
+                            <td>@Html.DisplayFor(m => i.NumberOfPages)</td>
+                            <td>@Html.DisplayFor(m => i.CategoryId)</td>
+                        <td>
+                        <a asp-controller="Product" asp-action="EditProduct" asp-route-id="@i.Id"><i class="bi bi-pencil-square"></i>
+                Edit</a>
+                        </td>
+                    </tr>
+        }
+
+
+</table>
+
+</body>
+</html>
+
