@@ -1,0 +1,73 @@
+﻿@model List<Category>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <style>
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Show Category list Batch A</h1>
+
+    <h2>Category Table</h2>
+
+    <a type="button" class="btn btn-primary" asp-controller="Category" asp-action="AddCategory">Add</a>
+
+    <table>
+
+        <tr>
+
+            <th>Category Name</th>
+
+            <th>Category Description</th>
+
+        </tr>
+
+
+
+        @foreach (var i in Model)
+
+        {
+
+            <tr>
+
+                <td>@Html.DisplayFor(m => i.CategoryName)</td>
+
+                <td>@Html.DisplayFor(m => i.CategoryDescription)</td>
+
+            </tr>
+
+        }
+
+    </table>
+
+</body>
+
+</html>
