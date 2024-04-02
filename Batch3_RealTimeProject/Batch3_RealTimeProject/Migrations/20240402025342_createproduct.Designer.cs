@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Batch3_RealTimeProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240401031203_createproduct")]
+    [Migration("20240402025342_createproduct")]
     partial class createproduct
     {
         /// <inheritdoc />
@@ -48,26 +48,20 @@ namespace Batch3_RealTimeProject.Migrations
                         new
                         {
                             CategoryId = 1,
-                            CategoryDescription = "This is an Action related Book",
+                            CategoryDescription = "this is an action related book",
                             CategoryName = "Action"
                         },
                         new
                         {
                             CategoryId = 2,
-                            CategoryDescription = "This is a SciFi related Book",
+                            CategoryDescription = "this is an SciFi related book",
                             CategoryName = "SciFi"
                         },
                         new
                         {
                             CategoryId = 3,
-                            CategoryDescription = "This is a History related Book",
+                            CategoryDescription = "this is an History related book",
                             CategoryName = "History"
-                        },
-                        new
-                        {
-                            CategoryId = 4,
-                            CategoryDescription = "This is a Biography related Book",
-                            CategoryName = "Biography"
                         });
                 });
 
@@ -109,52 +103,6 @@ namespace Batch3_RealTimeProject.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Product");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 101,
-                            Author = "George Takei",
-                            CategoryId = 1,
-                            Description = "This is an Action related Book",
-                            ISBN = "UPC9781603094504",
-                            NumberOfPages = 100,
-                            Price = 19.989999999999998,
-                            Title = "They Called Us Enemy"
-                        },
-                        new
-                        {
-                            Id = 102,
-                            Author = "H.G. Wells",
-                            CategoryId = 2,
-                            Description = "This is an SciFi related Book",
-                            ISBN = "UPC9781558534209",
-                            NumberOfPages = 350,
-                            Price = 49.990000000000002,
-                            Title = "The War of the Worlds"
-                        },
-                        new
-                        {
-                            Id = 103,
-                            Author = "Oscar W. Cotton",
-                            CategoryId = 3,
-                            Description = "This is an History related Book",
-                            ISBN = "UPC75398521478",
-                            NumberOfPages = 150,
-                            Price = 28.0,
-                            Title = "The Good Old Days"
-                        },
-                        new
-                        {
-                            Id = 104,
-                            Author = "Arthur Max",
-                            CategoryId = 4,
-                            Description = "This is an Biography related Book",
-                            ISBN = "UPC2453698741",
-                            NumberOfPages = 300,
-                            Price = 150.0,
-                            Title = "Churchill The Life"
-                        });
                 });
 
             modelBuilder.Entity("Batch3_RealTimeProject.Models.Product", b =>

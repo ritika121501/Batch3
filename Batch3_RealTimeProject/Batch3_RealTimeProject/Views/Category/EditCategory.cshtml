@@ -1,0 +1,19 @@
+﻿@model Category
+<h1>Edit Category</h1>
+
+<form method="post">
+    <fieldset>
+        @Html.HiddenFor(m => m.CategoryId)
+        <div>
+            <label for="exampleInputEmail1" class="form-label mt-4">Category Name</label>
+            @Html.TextBoxFor(m => m.CategoryName, new { @class = "form-control" })
+        </div>
+        <div>
+            <label for="exampleInputPassword1" class="form-label mt-4">Category Description</label>
+            @Html.TextBoxFor(m => m.CategoryDescription, new { @class = "form-control" })
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Edit Category</button>
+    </fieldset>
+</form>
