@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Batch3_RealTimeProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+329ed079b1784cbec882b3e69c2c306c7c4a10b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d99feac3da2c2de3ca9ea891f7c4c233046253a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Batch3_RealTimeProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Batch3_RealTimeProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
