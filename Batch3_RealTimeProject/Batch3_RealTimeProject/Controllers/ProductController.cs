@@ -60,18 +60,18 @@ namespace Batch3_RealTimeProject.Controllers
             return RedirectToAction("ShowProductList");
         }
 
-        //[HttpGet]
-        //public IActionResult DeleteProduct(int id)
-        //{
-        //    var deleteProduct = _productRepo.GetById(id);
-        //    if (deleteProduct == null)
-        //    {
-        //        return NotFound();
+        [HttpGet]
+        public IActionResult DeleteProduct(int id)
+        {
+            var deleteProduct = _productRepo.GetById(id);
+            if (deleteProduct == null)
+            {
+                return NotFound();
 
-        //    }
-        //    _productRepo.Delete(deleteProduct);
-        //    return RedirectToAction("ShowProductList");
+            }
+            _productRepo.DeleteById(deleteProduct);
+            return RedirectToAction("ShowProductList");
 
-        //}
+        }
     }
 }
