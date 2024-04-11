@@ -1,0 +1,24 @@
+﻿<h2>Company Details</h2>
+<p>
+	A company, abbreviated as co., is a legal entity representing an association of legal people, whether natural, juridical or a mixture of both, with a specific objective. Company members share a common purpose and unite to achieve specific, declared goals.
+
+	Over time, companies have evolved to have following features: "separate legal personality, limited liability, transferable shares, investor ownership, and a managerial hierarchy".[1] The company, as an entity, was created by the state which granted the privilege of incorporation.
+</p>
+
+
+<button id="CompanyData" type="button" class="btn btn-success">Get All Company List</button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+		crossorigin="anonymous"></script>
+<script>
+   
+	$(document).ready(function () {
+		$("#CompanyData").on('click', function () {
+			$.get("Company/GetCompany", function (data) {
+				console.log(data);
+			});
+		});
+	});
+</script>
+

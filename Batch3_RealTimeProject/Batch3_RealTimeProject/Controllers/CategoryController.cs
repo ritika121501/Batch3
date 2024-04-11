@@ -21,7 +21,17 @@ namespace Batch3_RealTimeProject.Controllers
             return View(listOfCate);
         }
 
+        [HttpGet]
+
+        public JsonResult ShowCategoryList1()
+        {
+            var listOfCate = _genericRepoCate.GetAll();
+            return Json(listOfCate);
+        }
+        //tempdata/ ViewBag/Viewdata
         //Http Verbs
+
+        //what are the different state management techniques in mvc? -- Tempdata/ViewBag/ViewData/Query string/SEssions/Cookies
 
         //two way binding
 
@@ -35,7 +45,9 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult AddCategory(Category cate)
         {
             _genericRepoCate.Create(cate);
-
+           
+            TempData["Success"] = "Category Created Successfully";
+            
             return RedirectToAction("ShowCategoryList");
         }
         [HttpGet]
@@ -49,6 +61,7 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult EditCategory(Category category)
         {
             _genericRepoCate.Update(category);
+            TempData["Success"] = "Category Updated Successfully";
             return RedirectToAction("ShowCategoryList");
         }
 

@@ -33,6 +33,7 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult AddProduct(Product product)
         {
             _productRepo.Create(product);
+            TempData["Success"] = "Product Created Successfully";
             return RedirectToAction("ShowProductList");
         }
 
@@ -57,6 +58,7 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult EditProduct(Product product)
         {
             _productRepo.Update(product);
+            TempData["Success"] = "Product Updated Successfully";
             return RedirectToAction("ShowProductList");
         }
 
