@@ -6,8 +6,8 @@
 </p>
 
 
-<button id="CompanyData" type="button" class="btn btn-success">Get All Company List</button>
-
+@* <button id="CompanyData" type="button" class="btn btn-success">Get All Company List</button> *@
+<a class="btn btn-success" asp-controller="Company" asp-action="ShowCompanyList">Get All Company List</a>
 <script src="https://code.jquery.com/jquery-3.7.1.js"
 		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
 		crossorigin="anonymous"></script>
@@ -15,8 +15,8 @@
    
 	$(document).ready(function () {
 		$("#CompanyData").on('click', function () {
-			$.get("Company/GetCompany", function (data) {
-				console.log(data);
+			$.get("Company/ShowCompanyList", function (data) {
+				 console.log(data);
 			});
 		});
 	});
