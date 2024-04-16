@@ -28,7 +28,7 @@
     <th>Price</th>
     <th>Description</th>
     <th>NumberOfPages</th>
-    <th>CategoryId</th>
+    
   </tr>
             </thead>
             <tbody>
@@ -41,7 +41,6 @@
                                     <td>@obj.Price</td>
                                     <td>@obj.Description</td>
                                     <td>@obj.NumberOfPages</td>
-                                    <td>@obj.CategoryId</td> 
                             <td>
                                 <div class="w-75 btn-group" role="group">
                                     <a asp-controller="Product" asp-action="EditProduct" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
