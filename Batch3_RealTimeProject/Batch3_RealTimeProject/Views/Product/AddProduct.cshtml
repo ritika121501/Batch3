@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post" class="row">
+        <form method="post" class="row" enctype="multipart/form-data">
             <div class="border p-3">
                 @*<div asp-validation-summary="ModelOnly"></div>*@
                 <div class="form-floating py-2 col-12">
@@ -40,6 +40,11 @@
                  <div class="form-floating py-2 col-12">
                     <input asp-for="NumberOfPages" class="form-control border-0 " />
                     <label asp-for="NumberOfPages" class="ms-2"></label>
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input type="file" name="file" asp-for="ProductImageUrl" class="form-control border-0 " />
+                    <label class="ms-2">Image Url</label>
 
                 </div>
 

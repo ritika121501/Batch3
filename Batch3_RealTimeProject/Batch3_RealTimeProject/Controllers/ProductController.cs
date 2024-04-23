@@ -10,11 +10,13 @@ namespace Batch3_RealTimeProject.Controllers
     {
         private readonly IGenericRepo<Product> _productRepo;
         private readonly IGenericRepo<Category> _categoryRepo;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(IGenericRepo<Product> productRepo, IGenericRepo<Category> categoryRepo)
+        public ProductController(IGenericRepo<Product> productRepo, IGenericRepo<Category> categoryRepo, IWebHostEnvironment webHostEnvironment)
         {
             _productRepo = productRepo;
             _categoryRepo = categoryRepo;
+            _webHostEnvironment = webHostEnvironment;
         }
 
 
@@ -40,8 +42,25 @@ namespace Batch3_RealTimeProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddProduct(Product product)
+        public IActionResult AddProduct(Product product, IFormFile file)
         {
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            if(file != null)
+            {
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                string productImagePath = Path.Combine(wwwRootPath, @"Images\Product");
+
+                //what is the purpose using block
+                //using statement internally calls IDisposable which will make sure that 
+                //the resource that has been consumed during sqlConnectiom, Filestream, or memory stream
+                //will be freed up -- GC get invoked
+                using (var fileStream = new FileStream(Path.Combine(productImagePath, fileName), FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+                product.ProductImageUrl = @"\Images\Product\" + fileName;
+            }
+            
             _productRepo.Create(product);
             TempData["Success"] = "Product Created Successfully";
             return RedirectToAction("ShowProductList");
@@ -71,8 +90,26 @@ namespace Batch3_RealTimeProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditProduct(Product product)
+        public IActionResult EditProduct(Product product, IFormFile file)
         {
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            string productImagePath = Path.Combine(wwwRootPath, @"Images\Product");
+
+            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+            if (!String.IsNullOrEmpty(product.ProductImageUrl))
+            {
+                var oldPath = Path.Combine(productImagePath, product.ProductImageUrl);
+
+                if(System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+                using (var fileStream = new FileStream(Path.Combine(productImagePath, fileName), FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+                product.ProductImageUrl = @"\Images\Product\" + fileName;
+            }
             _productRepo.Update(product);
             TempData["Success"] = "Product Updated Successfully";
             return RedirectToAction("ShowProductList");

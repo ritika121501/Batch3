@@ -19,5 +19,7 @@ namespace Batch3_RealTimeProject.Models
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
+        public string ProductImageUrl { get; set; }
+
     }
 }
