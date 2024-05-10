@@ -31,7 +31,7 @@ namespace Batch3_RealTimeProject.Controllers
         [HttpGet]
         public IActionResult AddProduct()
         {
-            //example for projections in EF/ anonymous functions/delegates-anonymous functions
+            //example for projections in EF/ anonymous functions/delegates-anonymous functions/ Projections
             IEnumerable<SelectListItem> CategoryList = _categoryRepo.GetAll().Select(u => new SelectListItem
             {
                 Text = u.CategoryName,

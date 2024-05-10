@@ -23,6 +23,11 @@
             return _applicationDbContext.Set<T>().Find(id);
         }
 
+        public T GetById(string id)
+        {
+            return _applicationDbContext.Set<T>().Find(id);
+        }
+
         public void Update(T objModel)
         {
             _applicationDbContext.Entry(objModel).State = Microsoft.EntityFrameworkCore.EntityState.Modified;

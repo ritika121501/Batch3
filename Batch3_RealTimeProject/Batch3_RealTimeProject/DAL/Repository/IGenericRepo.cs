@@ -7,5 +7,6 @@
         void Update(T objModel);
         void DeleteById(T obj);
         void Create(T objModel);
+        T GetById(string id);
     }
 }
