@@ -10,13 +10,16 @@ namespace Batch3_RealTimeProject.Controllers
     {
         private readonly IGenericRepo<Product> _productRepo;
         private readonly IGenericRepo<Category> _categoryRepo;
+        private readonly IGenericRepo<ProductImage> _productImageRepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(IGenericRepo<Product> productRepo, IGenericRepo<Category> categoryRepo, IWebHostEnvironment webHostEnvironment)
+        public ProductController(IGenericRepo<Product> productRepo, IGenericRepo<Category> categoryRepo, 
+            IWebHostEnvironment webHostEnvironment, IGenericRepo<ProductImage> productImageRepo)
         {
             _productRepo = productRepo;
             _categoryRepo = categoryRepo;
             _webHostEnvironment = webHostEnvironment;
+            _productImageRepo = productImageRepo;
         }
 
 
@@ -94,7 +97,7 @@ namespace Batch3_RealTimeProject.Controllers
         {
             string wwwRootPath = _webHostEnvironment.WebRootPath;
             string productImagePath = Path.Combine(wwwRootPath, @"Images\Product");
-
+            var productImage = new ProductImage();
             string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
             if (!String.IsNullOrEmpty(product.ProductImageUrl))
             {
@@ -110,6 +113,9 @@ namespace Batch3_RealTimeProject.Controllers
                 }
                 product.ProductImageUrl = @"\Images\Product\" + fileName;
             }
+            productImage.ProductId = product.Id;
+            productImage.ImageUrl = product.ProductImageUrl = @"\Images\Product\" + fileName;
+            _productImageRepo.Create(productImage);
             _productRepo.Update(product);
             TempData["Success"] = "Product Updated Successfully";
             return RedirectToAction("ShowProductList");

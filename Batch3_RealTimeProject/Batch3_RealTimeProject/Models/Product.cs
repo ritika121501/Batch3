@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Batch3_RealTimeProject.Models
 {
@@ -20,6 +21,8 @@ namespace Batch3_RealTimeProject.Models
         public virtual Category Category { get; set; }
 
         public string ProductImageUrl { get; set; }
+        [ValidateNever]
+        public List<ProductImage> ProductImages { get; set; }
 
     }
 }

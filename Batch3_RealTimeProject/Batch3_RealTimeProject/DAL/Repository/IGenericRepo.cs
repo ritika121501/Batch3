@@ -1,4 +1,6 @@
-﻿namespace Batch3_RealTimeProject.DAL.Repository
+﻿using Batch3_RealTimeProject.Models;
+
+namespace Batch3_RealTimeProject.DAL.Repository
 {
     public interface IGenericRepo<T> where T : class
     {
@@ -8,5 +10,6 @@
         void DeleteById(T obj);
         void Create(T objModel);
         T GetById(string id);
+        List<Product> GetByIdForList();
     }
 }
