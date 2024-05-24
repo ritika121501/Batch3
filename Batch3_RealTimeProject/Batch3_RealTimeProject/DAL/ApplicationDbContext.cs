@@ -19,6 +19,13 @@ namespace Batch3_RealTimeProject.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //builder pattern -- this pattern is known as buider pattern
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.ProductImages)
+                .WithOne(pi => pi.Product)
+                .HasForeignKey(pi => pi.ProductId);
+
+
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, CategoryName = "Action", CategoryDescription = "this is an action related book" },
