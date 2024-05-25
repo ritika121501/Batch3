@@ -7,7 +7,7 @@ namespace Batch3_RealTimeProject.Controllers
     public class CategoryController : Controller
 
     {
-       private readonly IGenericRepo<Category> _genericRepoCate;
+        private readonly IGenericRepo<Category> _genericRepoCate;
         public CategoryController(IGenericRepo<Category> genericRepoCate)
         {
             _genericRepoCate = genericRepoCate;
@@ -45,9 +45,9 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult AddCategory(Category cate)
         {
             _genericRepoCate.Create(cate);
-           
+
             TempData["Success"] = "Category Created Successfully";
-            
+
             return RedirectToAction("ShowCategoryList");
         }
         [HttpGet]

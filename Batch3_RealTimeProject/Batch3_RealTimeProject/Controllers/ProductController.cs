@@ -13,7 +13,7 @@ namespace Batch3_RealTimeProject.Controllers
         private readonly IGenericRepo<ProductImage> _productImageRepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(IGenericRepo<Product> productRepo, IGenericRepo<Category> categoryRepo, 
+        public ProductController(IGenericRepo<Product> productRepo, IGenericRepo<Category> categoryRepo,
             IWebHostEnvironment webHostEnvironment, IGenericRepo<ProductImage> productImageRepo)
         {
             _productRepo = productRepo;
@@ -48,7 +48,7 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult AddProduct(Product product, IFormFile file)
         {
             string wwwRootPath = _webHostEnvironment.WebRootPath;
-            if(file != null)
+            if (file != null)
             {
                 string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                 string productImagePath = Path.Combine(wwwRootPath, @"Images\Product");
@@ -63,7 +63,7 @@ namespace Batch3_RealTimeProject.Controllers
                 }
                 product.ProductImageUrl = @"\Images\Product\" + fileName;
             }
-            
+
             _productRepo.Create(product);
             TempData["Success"] = "Product Created Successfully";
             return RedirectToAction("ShowProductList");
@@ -103,7 +103,7 @@ namespace Batch3_RealTimeProject.Controllers
             {
                 var oldPath = Path.Combine(productImagePath, product.ProductImageUrl);
 
-                if(System.IO.File.Exists(oldPath))
+                if (System.IO.File.Exists(oldPath))
                 {
                     System.IO.File.Delete(oldPath);
                 }

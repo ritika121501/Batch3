@@ -16,6 +16,7 @@ namespace Batch3_RealTimeProject.DAL
         public DbSet<Company> Company { get; set; }
         public DbSet<Address> Address { get; set; }
         public DbSet<Cart> Cart { get; set; }
+        public DbSet<ShoppingCart> ShoppingCart { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

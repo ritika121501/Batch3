@@ -11,11 +11,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IGenericRepo<Product>, GenericRepo<Product>>();
 builder.Services.AddScoped<IGenericRepo<Category>, GenericRepo<Category>>();
 builder.Services.AddScoped<IGenericRepo<Cart>, GenericRepo<Cart>>();
+builder.Services.AddScoped<IGenericRepo<ProductImage>, GenericRepo<ProductImage>>();
 
+builder.Services.AddScoped<IGenericRepo<ShoppingCart>, GenericRepo<ShoppingCart>>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("batch20")));
 
-//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
 var app = builder.Build();
 

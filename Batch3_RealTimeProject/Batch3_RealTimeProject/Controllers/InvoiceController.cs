@@ -7,7 +7,7 @@ namespace Batch3_RealTimeProject.Controllers
     public class InvoiceController : Controller
 
     {
-       private readonly IGenericRepo<Invoice> _genericRepoInvoice;
+        private readonly IGenericRepo<Invoice> _genericRepoInvoice;
         public InvoiceController(IGenericRepo<Invoice> genericRepoInvoice)
         {
             _genericRepoInvoice = genericRepoInvoice;
@@ -17,7 +17,7 @@ namespace Batch3_RealTimeProject.Controllers
 
         public IActionResult ShowInvoiceListWithUserId(string userId)
         {
-            
+
             var listOfCate = _genericRepoInvoice.GetById(userId);
             return View(listOfCate);
         }
@@ -41,7 +41,7 @@ namespace Batch3_RealTimeProject.Controllers
             double totalPrice = 0;
 
             _genericRepoInvoice.Create(invoice);
-           
+
             TempData["Success"] = "order Created Successfully";
             //change required once UI is ready
             return RedirectToAction("ShowCategoryList");

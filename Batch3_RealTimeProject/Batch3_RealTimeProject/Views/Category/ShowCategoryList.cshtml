@@ -1,5 +1,4 @@
-﻿
-@model List<Category>
+﻿@model List<Category>
 
 <div class="card shadow border-0 mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
@@ -29,38 +28,37 @@
                     <th>
                         Category Description
                     </th>
-                    
+
                 </tr>
             </thead>
             <tbody>
-
             </tbody>
-            
+
         </table>
 
-        
+
     </div>
 </div>
 
-<link href="//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" rel="stylesheet"/>
-@section scripts{
+<link href="//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" rel="stylesheet" />
+@section scripts {
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
 
     <script>
 
         $('#datatableDemo').DataTable({
-            "serverSide" : true,
-            
+            "serverSide": true,
+
             "ajax": {
                 "url": "/Category/CategoryListData",
                 "type": "POST",
-                "datatype" : "json"
+                "datatype": "json"
             },
-            "columns" : [
+            "columns": [
                 { "data": "categoryName" },
                 { "data": "categoryDescription" }
             ]

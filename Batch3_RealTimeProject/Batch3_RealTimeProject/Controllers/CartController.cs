@@ -7,7 +7,7 @@ namespace Batch3_RealTimeProject.Controllers
     public class CartController : Controller
 
     {
-       private readonly IGenericRepo<Cart> _genericRepoCart;
+        private readonly IGenericRepo<Cart> _genericRepoCart;
         public CartController(IGenericRepo<Cart> genericRepoCart)
         {
             _genericRepoCart = genericRepoCart;
@@ -17,7 +17,7 @@ namespace Batch3_RealTimeProject.Controllers
 
         public IActionResult ShowCartListWithUserId(string userId)
         {
-            
+
             var listOfCate = _genericRepoCart.GetById(userId);
             return View(listOfCate);
         }
@@ -39,7 +39,7 @@ namespace Batch3_RealTimeProject.Controllers
         public IActionResult AddToCart(Cart cart)
         {
             _genericRepoCart.Create(cart);
-           
+
             TempData["Success"] = "order Created Successfully";
             //change required once UI is ready
             return RedirectToAction("ShowCategoryList");
