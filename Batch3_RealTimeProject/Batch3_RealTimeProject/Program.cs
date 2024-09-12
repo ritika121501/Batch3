@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IGenericRepo<Company>, GenericRepo<Company>>();
 builder.Services.AddScoped<IGenericRepo<Product>, GenericRepo<Product>>();
 builder.Services.AddScoped<IGenericRepo<Category>, GenericRepo<Category>>();
 builder.Services.AddScoped<IGenericRepo<Cart>, GenericRepo<Cart>>();
